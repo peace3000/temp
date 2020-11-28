@@ -1,18 +1,14 @@
-name: "Close Irregular Issues"
+name: Autocloser
 
-on:
-  issues:
-    types: [opened, edited]
+on: [issues, pull_request]
 
 jobs:
-  auto_close_issues:
+  autoclose:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Automatically close issues that don't follow the issue template
-        uses: lucasbento/auto-close-issues@v1.0.2
-        with:
-          github-token: ${{ secrets.GH_TOKEN }}
-          issue-close-message: "@${issue.user.login}: hello! :wave:\n\nThis issue is being automatically closed because it does not follow the issue template. \n> Follow the template to edit this issue and it will automatically reopen."
-          closed-issues-label: "🙁 Not following issue template"
+    - name: Autoclose issues that did not follow issue template
+      uses: roots/issue-closer@v1.1
+      with:
+        repo-token: ${{ secrets.GH_TOKEN }}
+        issue-close-message: "@${issue.user.login} this issue was automatically closed because it did not follow the issue template"
+        issue-pattern: "[x] I have read the doc"
