@@ -10,7 +10,7 @@ jobs:
       uses: roots/issue-closer@v1.1
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-close-message: "@${issue.user.login} this issue was automatically closed because it did not follow the issue template"
+        issue-close-message: "Hi @${issue.user.login} :wave:,\n\nThis issue is being automatically closed because it does not follow the issue template."
         issue-pattern: "\\[x\\] I have read"
         pr-pattern: "\\[x\\] Bug|\\[x\\] New feat|\\[x\\] Break|\\[x\\] Doc"
-        pr-close-message: "@${issue.user.login} this PR was automatically closed because it did not follow the PR template"
+        pr-close-message: "Hi @${pr.user.login} :wave:,\n\nThis PR is being automatically closed because it does not follow the PR template."
