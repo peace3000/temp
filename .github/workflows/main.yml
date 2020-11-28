@@ -13,4 +13,4 @@ jobs:
         issue-close-message: "Hi @${issue.user.login} :wave:,\n\nThis issue is being automatically closed because it does not follow the issue template."
         issue-pattern: "\\[x\\] I have read"
         pr-pattern: "\\[x\\] Bug|\\[x\\] New feat|\\[x\\] Break|\\[x\\] Doc"
-        pr-close-message: "Hi @${pr.user.login} :wave:,\n\nThis PR is being automatically closed because it does not follow the PR template."
+        pr-close-message: "Hi @${pull_request.user.login} :wave:,\n\nThis PR is being automatically closed because it does not follow the PR template."
