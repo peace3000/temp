@@ -2,9 +2,9 @@ name: Autocloser
 
 on:
   issues:
-    types: [opened, edited]
+    types: opened
   pull_request:
-    types: [opened, edited]
+    types: opened
 
 jobs:
   autoclose:
