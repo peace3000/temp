@@ -16,7 +16,9 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-pattern: "\\[x\\] I have read"
         issue-close-message: |
-          ":wave: Hi @${issue.user.login},\n\nThis issue is being automatically closed because it does not follow the issue template."
+          :wave: Hi @${issue.user.login},\n
+          This issue is being automatically closed because it does not follow the issue template.
         pr-pattern: "\\[x\\] Bug|\\[x\\] New feat|\\[x\\] Break|\\[x\\] Doc"
         pr-close-message: |
-          ":wave: Hi @${pull_request.user.login},\n\nThis PR is being automatically closed because it does not follow the PR template."
+          :wave: Hi @${pull_request.user.login},\n
+          This PR is being automatically closed because it does not follow the PR template.
