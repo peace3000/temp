@@ -6,6 +6,7 @@ daysUntilClose: 1
 exemptLabels:
   - security
   - pending
+  - at work
 # Label to use when marking an issue as stale
 staleLabel: inactivity
 # Comment to post when marking an issue as stale. Set to `false` to disable
